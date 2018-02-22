@@ -11,20 +11,20 @@
 #### Passo-a-Passo!
 1. Instalar todos os componentes;
 2. Adicionar em variáveis de ambiente, '*Path*', o caminho do *MongoDB*;
-3. Criar pasta `_C:/data/db_`;
-4. Criar pasta '_C:/Project_';
+3. Criar pasta _`"C:/data/db"`_;
+4. Criar pasta _`"C:/Project"`_;
 5. Faça o *fork* do projeto;
-6. Executar o *Cmder* e através dele vá até a pasta '_Project_', por fim rode o comando: '_git clone [URL.thisProject]_', trocando '_[URL.thisProject]_' pela URL do fork do projeto;
-7. Após feito o clone do seu fork, entre na pasta backend através do *Cmder* e atualize as dependências através do comando '_npm i_';
+6. Executar o *Cmder* e através dele vá até a pasta _`"Project"`_, por fim rode o comando: _`git clone [URL.thisProject]`_, trocando _`[URL.thisProject]`_ pela URL do fork do projeto;
+7. Após feito o clone do seu fork, entre na pasta backend através do *Cmder* e atualize as dependências através do comando _`npm i`_;
 8. Faça o passo 6 novamente, porém na pasta frontend.
 
 ## Rodando a aplicação
 
 Para rodar a aplicação você precisa:
-- Iniciar o banco de dados através do comando >> mongod
-- Após, rodar a aplicação através do comando >> npm run
+- Iniciar o banco de dados através do comando >> `mongod`
+- Após, rodar a aplicação através do comando >> `npm run`
 
-O comando '_npm run_' pode vir acompanhado da opção '_dev_' ou '_production_', utilizadas para definir o script de configuração.
+O comando _`npm run`_ pode vir acompanhado da opção _`dev`_ ou _`production`_, utilizadas para definir o script de configuração.
 
 ---
 ## Informações adversas!
