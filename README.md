@@ -35,10 +35,57 @@ Algumas informações das possíveis tecnologias a serem utilizadas no projeto e
 >npm init -y
 
 #### Utilizando Webpack
+É um compilador de código javascript que transforma os módulos em conteúdo estático.
+
+Para instalar:
 >npm i --save-dev webpack webpack-dev-server
 
->Em package.json, pode utilizar da tag script para fazer alterações como:
+Após instalar é necessário criar o arquivo de configuração do webpack: `webpack.config.json`.
+
+```javascript
+const webpack = require('webpack')
+
+module.exports = {
+    entry: './ex/index.js',
+    output: {
+        path: __dirname + '/public',
+        filename: './bundle.js'
+    },
+    devServer: {
+        port: 8080,
+        contentBase: './public'
+    }
+
+    ...
+}
+```
+
+>Em package.json, deve-se utilizar da tag script para fazer alterações para habilitar o webpack, incluindo:
 >- dev: "webpack-dev-server --progress --colors --inline --hot"
+
+#### Módulos
+Javascript é uma linguagem adaptativa com múltiplas versões e atualmente vem se expandindo para outras plataformas, criando uma modularização da linguagem através de dependências de arquivos gerenciadas através das tecnologias CommonsJS e o ES2015, por exemplo, que ambas funcionam com o Webpack.
+
+##### CommonsJS
+Com o CommonsJS são criados vários arquivos javascript interligados por dependências. Desta forma através do index.js o webpack recupera todos os módulos e cria o conteúdo estático do site.
+
+##### Transpile >>> Babel ES2015
+O Babel é um transcritor de código que trabalha com modularização, traduzindo o código ES2015 para Javascript.
+
+Este Transpile, tem que ser configurado no Webpack, adicionando no arquivo `webpack.config.js`:
+
+```javascript
+module: {
+        loaders:[{
+            test: /.js?$/,
+            loader:'babel-loader',
+            exclude: /node_modules/,
+            query: {
+                presets: ['es2015']
+            }
+        }]
+    }
+```
 
 ---
 ##### ©Copyright - Todos os diretos de cópia são reservados aos autores!  
