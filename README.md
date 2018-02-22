@@ -72,7 +72,10 @@ Com o CommonsJS são criados vários arquivos javascript interligados por depend
 ##### Transpile >>> Babel ES2015
 O Babel é um transcritor de código que trabalha com modularização, traduzindo o código ES2015 para Javascript.
 
-Este Transpile, tem que ser configurado no Webpack, adicionando no arquivo `webpack.config.js`:
+Para utilizar o Babel, é necessário instalar as suas dependências com o comando:
+> npm i --save-dev babel-core@6.22.1 babel-loader@6.2.10 babel-preset-es@6.22.0
+
+Depois de instalado, tem que ser configurado no Webpack, adicionando no arquivo `webpack.config.js`:
 
 ```javascript
 module: {
