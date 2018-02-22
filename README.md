@@ -4,14 +4,14 @@
 
 #### É necessário baixar:
 - [MongoDB](https://www.mongodb.com/) (Banco de dados)
-- [Node.JS](https://nodejs.org/en/)
+- [Node.JS](https://nodejs.org/en/) (Linguagem)
 - [Cmder](http://cmder.net/) (Terminal windows com git)
 - [Visual Studio Code](https://code.visualstudio.com) (IDE)
 
 #### Passo-a-Passo!
 1. Instalar todos os componentes;
 2. Adicionar em variáveis de ambiente, '*Path*', o caminho do *MongoDB*;
-3. Criar pasta '_C:/data/db_';
+3. Criar pasta `_C:/data/db_`;
 4. Criar pasta '_C:/Project_';
 5. Faça o *fork* do projeto;
 6. Executar o *Cmder* e através dele vá até a pasta '_Project_', por fim rode o comando: '_git clone [URL.thisProject]_', trocando '_[URL.thisProject]_' pela URL do fork do projeto;
