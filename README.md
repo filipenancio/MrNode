@@ -14,30 +14,30 @@
 
 Para um melhor entendimento foram feitos dois passo a passo, tratando das particularidades de cada sistema operacional, Windows e Ubuntu.
 
- # | Windows 
+ . | Windows 
 ---|--------
-1. | Instalar todos os componentes;
-2. | Adicionar em variáveis de ambiente, *`Path`*, o caminho da pasta bin do MongoDB, algo como: *`".../MongoDB/.../bin"`*;
-3. | Criar pasta _`"C:/data/db"`_;
-4. | Criar pasta _`"C:/Project"`_;
-5. | Faça o *fork* do projeto;
-6. | Executar o *Cmder* e através dele vá até a pasta _`"Project"`_, por fim rode o comando: _`git clone [URL.thisProject]`_, trocando _`[URL.thisProject]`_ pela URL do fork do projeto;
-7. | Após feito o clone do seu fork, entre na pasta do projeto através do terminal e atualize as dependências utilizando o comando _`npm i`_;
+ 1 | Instalar todos os componentes;
+ 2 | Adicionar em variáveis de ambiente, *`Path`*, o caminho da pasta bin do MongoDB, algo como: *`".../MongoDB/.../bin"`*;
+ 3 | Criar pasta _`"C:/data/db"`_;
+ 4 | Criar pasta _`"C:/Project"`_;
+ 5 | Faça o *fork* do projeto;
+ 6 | Executar o *Cmder* e através dele vá até a pasta _`"Project"`_, por fim rode o comando: _`git clone [URL.thisProject]`_, trocando _`[URL.thisProject]`_ pela URL do fork do projeto;
+ 7 | Após feito o clone do seu fork, entre na pasta do projeto através do terminal e atualize as dependências utilizando o comando _`npm i`_;
 |
 
 Já no caso do Ubuntu...
 
- # | Linux (Ubuntu)
+.  | Linux (Ubuntu)
 ---|---------------
-1. | Primeiro atualize o repositório utilizando, nesta ordem, os comanandos: `sudo apt-get update` e `sudo apt-get upgrade`;
-2. | Com o sistema já atualizado, instale o *Git*, através do comando `sudo apt-get install git`;
-3. | Baixe do [site](https://code.visualstudio.com) e instale, a IDE Visual Studio Code;
-4. | Instale o Node.js, através do comando `sudo apt-get install nodejs` e após instale o *npm*, uilizado para gerenciar pacotes do node, através do comando `sudo apt-get install npm`;
-5. | Estilizando o terminal para auxiliar no uso do git, instale o `zsh` através do comando `sudo apt-get install zsh`, instale o Curl para baixar o estivo usando `sudo apt-get install curl` e então execute o comando `sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"`, para baixar a costomização do *Oh My ZShell*.
-6. | Instalar o MongoDB seguindo as instruções para instalação em terminal;
-7. | Faça o *fork* do projeto;
-8. | Baixe o seu *fork* rodando o comando: _`git clone [URL.thisProject]`_, trocando _`[URL.thisProject]`_ pela URL do fork do projeto;
-9. | Após feito o clone do seu fork, entre na pasta do projeto através do terminal e atualize as dependências utilizando o comando _`npm i`_;
+1 | Primeiro atualize o repositório utilizando, nesta ordem, os comanandos: `sudo apt-get update` e `sudo apt-get upgrade`;
+2 | Com o sistema já atualizado, instale o *Git*, através do comando `sudo apt-get install git`;
+3 | Baixe do [site](https://code.visualstudio.com) e instale, a IDE Visual Studio Code;
+4 | Instale o Node.js, através do comando `sudo apt-get install nodejs` e após instale o *npm*, uilizado para gerenciar pacotes do node, através do comando `sudo apt-get install npm`;
+5 | Estilizando o terminal para auxiliar no uso do git, instale o `zsh` através do comando `sudo apt-get install zsh`, instale o Curl para baixar o estivo usando `sudo apt-get install curl` e então execute o comando `sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"`, para baixar a costomização do *Oh My ZShell*.
+6 | Instalar o MongoDB seguindo as instruções para instalação em terminal;
+7 | Faça o *fork* do projeto;
+8 | Baixe o seu *fork* rodando o comando: _`git clone [URL.thisProject]`_, trocando _`[URL.thisProject]`_ pela URL do fork do projeto;
+9 | Após feito o clone do seu fork, entre na pasta do projeto através do terminal e atualize as dependências utilizando o comando _`npm i`_;
 
 Neste momento o seu ambiente já estará preparado para rodar a aplicação.
 
