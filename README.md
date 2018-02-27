@@ -31,8 +31,8 @@ Já no caso do Ubuntu...
 1 | Primeiro atualize o repositório utilizando, nesta ordem, os comanandos: `sudo apt-get update` e `sudo apt-get upgrade`;
 2 | Com o sistema já atualizado, instale o *Git*, através do comando `sudo apt-get install git`;
 3 | Baixe do [site](https://code.visualstudio.com) e instale, a IDE Visual Studio Code;
-4 | Instale o Node.js, através do comando `sudo apt-get install nodejs` e após instale o *npm*, uilizado para gerenciar pacotes do node, através do comando `sudo apt-get install npm`;
-5 | Estilizando o terminal para auxiliar no uso do git, instale o `zsh` através do comando `sudo apt-get install zsh`, instale o Curl para baixar o estivo usando `sudo apt-get install curl` e então execute o comando `sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"`, para baixar a costomização do *Oh My ZShell*.
+4 | Estilizando o terminal para auxiliar no uso do git, instale o `zsh` através do comando `sudo apt-get install zsh`, instale o Curl para baixar o estivo usando `sudo apt-get install curl` e então execute o comando `sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"`, para baixar a costomização do *Oh My ZShell*;
+5 | Para instalar o Node.js é necessário fazer através do NVM, qual controla as versões do Node existentes. Para isso, utilize o comando `sudo apt-get install build-essential libssl-dev` e depois utilize o comando `curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash`. Agora com o NVM funcionando, use o comando `nvm ls-remote` para listar as versões disponíveis do Node e depois `nvm install [version]`, onde `[version]` é a versão escolhida, para instalar o Node. Após verifique se o NPM que gerencia os módulos está funcionando através do comando `npm -v`, caso o comando não for reconhecido, instale o *npm* através do comando `sudo apt-get install npm`;
 6 | Instalar o MongoDB seguindo as instruções para instalação em terminal;
 7 | Criar pasta _`"~\Project"`_;
 8 | Faça o *fork* do projeto, copiando o projeto para um diretório de uso exclusivo seu;
@@ -44,7 +44,7 @@ Neste momento o seu ambiente já estará preparado para rodar a aplicação.
 ## Rodando a aplicação
 
 Para rodar a aplicação você precisa:
-- Iniciar o banco de dados através do comando >> `mongod`
+- Iniciar o banco de dados através do comando >> `mongod` no Windows ou `sudo service mongod start` no linux
 - Após, rodar a aplicação através do comando >> `npm run`
 
 O comando _`npm run`_ pode vir acompanhado da opção _`dev`_ ou _`production`_, utilizadas para definir o script de configuração.
@@ -92,7 +92,7 @@ Javascript é uma linguagem adaptativa com múltiplas versões e atualmente vem 
 ##### CommonsJS
 Com o CommonsJS são criados vários arquivos javascript interligados por dependências. Desta forma através do index.js o webpack recupera todos os módulos e cria o conteúdo estático do site.
 
-##### Transpile >>> Babel ES2015
+##### Babel (ES2015)
 O Babel é um transcritor de código que trabalha com modularização, traduzindo o código ES2015 para Javascript.
 
 Para utilizar o Babel, é necessário instalar as suas dependências com o comando:
@@ -112,6 +112,53 @@ module: {
         }]
     }
 ```
+#### React
+
+Para instalar as dependências do react é necessário executar o comando `npm i --save-dev react@15.4.2`, adicionar o preset no webpack e baixa-lo através do comando `npm i --save-dec babel-preset-react@6.22.0`.
+
+##### Spread ( ...)
+
+O Spread é um recurso muito comum ao *React*, para utiliza-lo é necessário adicionar seu plugin ao babel. Para isto basta adicionar no arquivo de configuração do webpack, `plugin: ['transform-object-rest-spread']` e instalar o plugin com o comando `npm i --save-dev babel-transform-object-rest-spread@6.22.0`.
+
+#### CSS (Como utilizar)
+
+Para utilizar o CSS é preciso que seja configurado alguns plugins. Dentro do arquivo _`"webpack.config.js"`_ adicione `const ExtractTextPlugin = require('extract-text-webpack-plugin')` e antes da tag `module:`, adicione:
+
+```javascript
+plugins: [
+    new ExtractTextPlugin('app.css')
+]
+```
+
+Após é necessário criar um novo loader:
+
+```javascript
+{
+    test: /\.css$/,
+    loader: ExtractTextPlugin.extract("style-loader","css-loader")
+}
+```
+
+Para instalar as dependências:
+
+> npm i --save-dev extract-text-webpack-plugin@1.0.1 style-loader@0.13.1 css_loader@0.26.1
+
+Por fim, temos o arquivo _`"index.html"`_ na pasta `public`, que deverá ficar...
+
+``` html
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Exercícios de Webpack</title>
+        <link rel='stylesheet' href='app.css'>
+    </head>
+    <body>
+        <script src="bundle.js"></script>
+    </body>
+</html>
+```
+
 
 ---
 ##### ©Copyright - Todos os diretos de cópia são reservados aos autores!  
