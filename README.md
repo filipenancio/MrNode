@@ -159,6 +159,11 @@ Por fim, temos o arquivo _`"index.html"`_ na pasta `public`, que deverá ficar..
 </html>
 ```
 
+#### Postman (Teste de api)
+O Postman é uma extensão do Google Chrome para realizar teste de api.
+
+#### Ambiente de Produção
+Para rodar a aplicação em produção é indicado o uso do *pm2* para gerenciar o servidor. O *pm2* possui muitos artifícios interessantes como reiniciar o serviço em caso de falhas. 
 
 ---
 ##### ©Copyright - Todos os diretos de cópia são reservados aos autores!  
