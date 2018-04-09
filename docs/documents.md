@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Documentação
-permalink: /doc/
+permalink: /documentacao/
 ---
 
 Teste 2
